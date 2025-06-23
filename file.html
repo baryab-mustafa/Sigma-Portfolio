@@ -1,0 +1,179 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sigma Public Website</title>
+  <style>
+    :root {
+      --primary: #00b894; /* teal */
+      --bg: #f4f4f4; /* light background */
+      --accent: #0984e3; /* blue */
+      --text: #2d3436; /* dark text */
+    }* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+nav {
+  background: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15px;
+  margin: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+nav h2 {
+  color: var(--primary);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav ul li a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  left: 0;
+  bottom: -5px;
+  transition: 0.4s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+header {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: var(--primary);
+  animation: fadeIn 2s;
+}
+
+header p {
+  color: var(--accent);
+  font-size: 1.3rem;
+  white-space: nowrap;
+  border-right: 2px solid;
+  overflow: hidden;
+  animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
+}
+
+section {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+h2 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.card {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 1rem 0;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px var(--accent);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: #555;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+  </style>
+</head>
+<body>
+  <nav>
+    <h2>Sigma</h2>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>  <header>
+    <h1>Welcome to Sigma Web</h1>
+    <p>Your future starts here...</p>
+  </header>  <section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>I am Baryab Mustafa, a growing front-end web developer. I love building beautiful websites using HTML and CSS with animations and responsive layouts.</p>
+    </div>
+  </section>  <section id="skills">
+    <h2>My Skills</h2>
+    <div class="card">
+      <ul>
+        <li>HTML</li>
+        <li>CSS Box Model</li>
+        <li>CSS Colors & Fonts</li>
+        <li>CSS Shadows</li>
+        <li>CSS Position</li>
+        <li>CSS Flexbox</li>
+        <li>CSS Grid</li>
+        <li>CSS Float & Clear</li>
+        <li>CSS Overflow</li>
+        <li>CSS Selectors</li>
+        <li>CSS Transform</li>
+        <li>CSS Media Queries</li>
+        <li>CSS Variables</li>
+      </ul>
+    </div>
+  </section>  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="card">
+      <p>You can reach me at: <strong>+92 325 5145332</strong></p>
+    </div>
+  </section>  <footer>
+    <p>&copy; 2025 Baryab Mustafa | Sigma Web</p>
+  </footer>
+</body>
+</html>
